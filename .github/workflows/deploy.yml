@@ -24,6 +24,7 @@ jobs:
           mkdir dist
           cp index.html style.css .nojekyll dist/
           cp -R assets dist/
+          printf 'Commit: %s\nWorkflow run: %s\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" > dist/version.txt
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
