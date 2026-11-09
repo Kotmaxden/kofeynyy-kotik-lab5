@@ -4,7 +4,8 @@
 
 ## Содержимое
 
-- `index.html`: адаптивный сайт, стили и скрипт.
+- `index.html`: адаптивный сайт и скрипт.
+- style.css: стили сайта.
 - `assets/images/`: три фотографии JPEG, список источников и JSON-манифест.
 - `TASKS.md`: постановка задачи агенту и фактически выполненные изменения.
 - `CHANGELOG.md`: описание двух этапов разработки.
@@ -25,3 +26,8 @@
 ## Данные и изображения
 
 Сайт является учебной концепцией. История, меню, цены, акции и адрес демонстрационные. График: 08:00-22:00. Фотографии взяты из свободных источников, а не сняты автором лабораторной. См. [источники](assets/images/CREDITS.md).
+## Автоматическая публикация
+
+[![Deploy static site](https://github.com/Kotmaxden/kofeynyy-kotik-lab5/actions/workflows/deploy.yml/badge.svg?branch=main&event=push)](https://github.com/Kotmaxden/kofeynyy-kotik-lab5/actions/workflows/deploy.yml)
+
+При отправке изменений в `main` GitHub Actions проверяет файлы сайта, формирует артефакт и публикует его в [GitHub Pages](https://kotmaxden.github.io/kofeynyy-kotik-lab5/). Ошибка проверки останавливает публикацию. Локальный запуск из корня проекта: `python scripts/check_site.py`.
